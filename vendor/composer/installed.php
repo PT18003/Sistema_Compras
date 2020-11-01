@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'v8.2.0',
-    'version' => '8.2.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '04942fc944531d6c18688b1a1abfb4f54a385e59',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -51,6 +51,33 @@
       array (
       ),
       'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
+    ),
+    'doctrine/cache' => 
+    array (
+      'pretty_version' => '1.10.2',
+      'version' => '1.10.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '13e3381b25847283a91948d04640543941309727',
+    ),
+    'doctrine/dbal' => 
+    array (
+      'pretty_version' => '2.12.0',
+      'version' => '2.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c6d37b4c42aaa3c3ee175f05eca68056f4185646',
+    ),
+    'doctrine/event-manager' => 
+    array (
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
     ),
     'doctrine/inflector' => 
     array (
@@ -440,12 +467,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'v8.2.0',
-      'version' => '8.2.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '04942fc944531d6c18688b1a1abfb4f54a385e59',
     ),
     'laravel/tinker' => 
     array (
@@ -751,8 +778,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -1261,6 +1288,15 @@
       array (
       ),
       'reference' => 'bafc69caeb4d49c39fd0779086c03a3738cbb389',
+    ),
+    'ybr-nx/laravel-mariadb' => 
+    array (
+      'pretty_version' => '1.0.20',
+      'version' => '1.0.20.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1dd893432237e28d5d43d1de110be925602dd37d',
     ),
   ),
 );
