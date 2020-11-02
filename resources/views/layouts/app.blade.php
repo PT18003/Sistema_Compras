@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> Sirve para la paginacion, para darle estilo--}}
     <title>@yield('title')</title>
     </head>
     <body>
@@ -17,22 +18,27 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">Hidden brand</a>
+          <a class="navbar-brand" href="{{route('index')}}">Sistema De Compras</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('departamentos.index')}}">Departamentos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{{route('municipios.index')}}">Municipios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="{{route('areatrabajos.index')}}">Areas de Trabajo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('generos.index')}}">Genero</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('estadosciviles.index')}}">Estados Civiles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('estadosciviles.index')}}">Empleados</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </div>
       </nav>
 

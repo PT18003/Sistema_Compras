@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AreaTrabajo;
-class areatrabajoController extends Controller
+class AreaTrabajoController extends Controller
 {
     public function index()
     {

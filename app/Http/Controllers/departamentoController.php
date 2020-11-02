@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Departamento;//modelo de departamento
-class departamentoController extends Controller
+class DepartamentoController extends Controller
 {
     //creando el controlador para mostrar los datos en una tabla. 
     public function index()
@@ -43,6 +43,6 @@ class departamentoController extends Controller
     public function destroy(Departamento $departamento)
     {
         $departamento->delete();
-        return redirect()->route('departamentos.index');
+        return redirect()->route('departamentos.index'); 
     }
 }
