@@ -53,7 +53,7 @@ class Empleados extends Migration
             $table->bigIncrements('id');//para el ID
             $table->string('nombres',30)->nullable(false);//de tipo string y que no acepte valores nulos
             $table->string('apellidos',30)->nullable(false);
-            $table->string('direccion',30)->nullable(false);
+            $table->string('direccion',50)->nullable(false);
             $table->foreignId('municipio_id')->constrained();
             $table->foreignId('genero_id')->constrained();
             $table->string('telefono',8)->nullable(false);

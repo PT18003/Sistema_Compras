@@ -20,6 +20,9 @@ use App\Http\Controllers\EstadoCivilController;
 
 Route::get('/', function () {return view('welcome');})->name('index');
 
+/* Se pueden usar el metodo resourse para ahorrar lineas de codigo en una sola 
+pero hay que usar las convecciones que laravel nos da v: */
+
 //ruta para mostrar 
 Route::get('areatrabajos', [AreaTrabajoController::class,'index'])->name('areatrabajos.index');
 //ruta para la pagina y para guardar 
@@ -53,6 +56,7 @@ Route::post('municipios', [MunicipioController::class,'guardar'])->name('municip
 Route::get('municipios/{municipio}/edit', [MunicipioController::class,'edit'])->name('municipios.edit');
 Route::put('municipios/{municipio}', [MunicipioController::class,'actualizar'])->name('municipios.actualizar');
 Route::get('municipios/delete/{municipio}/', [MunicipioController::class,'destroy'])->name('municipios.destroy');
+
 //genero
 Route::get('generos', [GeneroController::class,'index'])->name('generos.index');
 Route::get('generos/create',  [GeneroController::class,'create'])->name('generos.create');
@@ -67,7 +71,13 @@ Route::post('estadosciviles', [EstadoCivilController::class,'guardar'])->name('e
 Route::get('estadosciviles/{estadocivil}/edit', [EstadoCivilController::class,'edit'])->name('estadosciviles.edit');
 Route::put('estadosciviles/{estadocivil}', [EstadoCivilController::class,'actualizar'])->name('estadosciviles.actualizar');
 Route::get('estadosciviles/delete/{estadocivil}/', [EstadoCivilController::class,'destroy'])->name('estadosciviles.destroy');
-
-Route::get('empleados', [EmpleadoController::class,'index']);
-Route::get('empleados/create', [EmpleadoController::class,'create']);
-Route::get('empleados/{empleado}', [EmpleadoController::class,'show']);
+//empleados
+Route::get('empleados', [EmpleadoController::class,'index'])->name('empleados.index');
+Route::get('empleados/create', [EmpleadoController::class,'create'])->name('empleados.create');
+Route::get('empleados/towns/{id}',[EmpleadoController::class,'getTowns'])->name('empleados.getTowns');
+Route::get('empleados/etowns/{empleado}',[EmpleadoController::class,'geteTowns'])->name('empleados.geteTowns');
+Route::post('empleados',[EmpleadoController::class,'guardar'])->name('empleados.guardar');
+Route::put('empleados/{empleado}', [EmpleadoController::class,'actualizar'])->name('empleados.actualizar');
+Route::get('empleados/{empleado}/edit', [EmpleadoController::class,'edit'])->name('empleados.edit');
+Route::get('empleados/delete/{empleado}/', [EmpleadoController::class,'destroy'])->name('empleados.destroy');
+Route::get('empleados/view/{empleado}', [EmpleadoController::class,'view'])->name('empleados.view');

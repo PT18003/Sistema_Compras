@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Empleado;
+use Empleados;
 
 class Municipio extends Model
 {
@@ -12,5 +14,10 @@ class Municipio extends Model
     public function departamentos()
     {
         return $this->belongsTo(Departamento::class,'id_departamento');
+    }
+    public function empleados()
+    {
+
+            return $this->hasMany(Empleado::class);
     }
 }
