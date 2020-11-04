@@ -11,3 +11,8 @@ $("#departamento").change(event=>
             });
         })
     });
+/*     $("#ver").click(event=> 
+        $.get(`/empleados/view/${event.target}`,function(res, sta)
+        {
+            $("#nombre").append(`<p> Seleccione </p>`);
+        })); */
