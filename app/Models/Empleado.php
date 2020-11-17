@@ -25,7 +25,7 @@ class Empleado extends Model
     }
     public function municipio()//funcion o metodo que son para relacionar, usar belongsTo en las tablas hijas.
     {
-        return $this->belongsTo(Municipio::class,'municipio_id');
+        return $this->belongsTo(Municipio::class,'id');
     }
     public function genero()
     {

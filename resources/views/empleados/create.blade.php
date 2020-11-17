@@ -46,8 +46,10 @@
             <div class="form-group col-md-3">
                 <label for="municipio">Municipio</label>
                 <select class="custom-select mr-sm-2" id="municipio" name="municipio" >
+                    @foreach ($municipios as $item)
                     <option selected>Seleccione</option>
-                    <option id="municipio" ></option>
+                   <option value="{{$item->id}}">{{$item->municipio}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group col-md-3">
