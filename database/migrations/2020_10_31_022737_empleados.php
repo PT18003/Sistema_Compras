@@ -36,6 +36,7 @@ class Empleados extends Migration
         {
             $table->bigIncrements('id');
             $table->string('departamento',25)->nullable(false);
+            $table->timestamps();
             
         });
         Schema::create('Municipio', function (Blueprint $table) 
@@ -47,6 +48,7 @@ class Empleados extends Migration
             //sino, esta esta otra forma: 
             $table->unsignedBigInteger('id_departamento');
             $table->foreign('id_departamento')->references('id')->on('Departamento');
+            $table->timestamps();
         });
         Schema::create('Empleados', function (Blueprint $table) 
         {
@@ -54,16 +56,23 @@ class Empleados extends Migration
             $table->string('nombres',30)->nullable(false);//de tipo string y que no acepte valores nulos
             $table->string('apellidos',30)->nullable(false);
             $table->string('direccion',50)->nullable(false);
-            $table->foreignId('municipio_id')->constrained();
-            $table->foreignId('genero_id')->constrained();
+            $table->bigInteger('id_municipio')->unsigned(); 
+            /*el campo para llave foranea se debe de declarar bigInteger si se ha declarado 
+            bigIncrement en la llave primaria a la que se va hacer relacion*/
+            $table->bigInteger('genero_id')->unsigned();
             $table->string('telefono',8)->nullable(false);
             $table->string('dui',9)->nullable(false);
             $table->decimal('salario',6,2)->nullable(false);
             $table->date('vencimientoContrato')->nullable(false);
-            $table->foreignId('areatrabajo_id')->constrained();
-            $table->foreignId('estadocivil_id')->constrained();
+            $table->bigInteger('areatrabajo_id')->unsigned();
+            $table->bigInteger('estadocivil_id')->unsigned();
             //$table->foreign('genero_id')->references('id')->on('Genero');
             $table->timestamps();//crea 2 campos en la tabla de fecha creado y fecha actualizado
+
+            $table->foreign('id_municipio')->references('id')->on('Municipio'); //refrencias para las llaves foraneas 
+            $table->foreign('areatrabajo_id')->references('id')->on('AreaTrabajo');
+            $table->foreign('genero_id')->references('id')->on('Genero');
+            $table->foreign('estadocivil_id')->references('id')->on('EstadoCivil');
         });
     }
 

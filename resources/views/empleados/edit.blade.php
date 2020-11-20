@@ -50,11 +50,15 @@
                     @endforeach
                 </select>
             </div>
-            <div class="form-group col-md-3">
+             <div class="form-group col-md-3">
                 <label for="municipio">Municipio</label>
                 <select class="custom-select mr-sm-2" id="municipio" name="municipio" >
                     <option value=0 selected>Seleccione</option>
-                    <option id="municipio" ></option>
+                   @foreach ($municipios as $item)
+                    <option @if ($item->id==$empleado->municipio->id)
+                        selected
+                    @endif value="{{$item->id}}">{{$item->municipio}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group col-md-3">
