@@ -81,3 +81,11 @@ Route::put('empleados/{empleado}', [EmpleadoController::class,'actualizar'])->na
 Route::get('empleados/{empleado}/edit', [EmpleadoController::class,'edit'])->name('empleados.edit');
 Route::get('empleados/delete/{empleado}/', [EmpleadoController::class,'destroy'])->name('empleados.destroy');
 Route::get('empleados/view/{empleado}', [EmpleadoController::class,'view'])->name('empleados.view');
+
+//proveedores
+Route::get('proveedores', [ProveedorController::class,'index'])->name('proveedores.index');
+Route::get('proveedores/create', [ProveedorController::class,'create'])->name('proveedores.create');
+Route::post('proveedores',[ProveedorController::class,'store'])->name('proveedores.store');
+Route::put('proveedores/{proveedor}', [ProveedorController::class,'update'])->name('proveedores.update');
+Route::get('proveedores/{proveedor}/edit', [ProveedorController::class,'edit'])->name('proveedores.edit');
+Route::get('proveedores/delete/{proveedor}/', [ProveedorController::class,'destroy'])->name('proveedores.destroy');
