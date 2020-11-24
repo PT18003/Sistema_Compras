@@ -39,6 +39,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('estadosciviles.index')}}">Empleados</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('articulosProveedores.index')}}">Articulos Proveedores</a>
+            </li> 
           </ul>
         </div>
       </nav>
